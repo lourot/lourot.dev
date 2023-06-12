@@ -9,9 +9,9 @@ export default {
   Layout,
   Head,
   // <title>
-  title: 'My Vike + React App',
+  title: 'Aurélien Lourot',
   // <meta name="description">
-  description: 'Demo showcasing Vike + React',
+  description: 'Aurélien Lourot',
   // <link rel="icon" href="${favicon}" />
   favicon: logoUrl,
   extends: vikeReact
