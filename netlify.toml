@@ -1,0 +1,5 @@
+# See
+# * https://docs.netlify.com/configure-builds/file-based-configuration/#deploy-contexts
+# * https://github.com/brillout/vike-react/issues/2
+[build]
+  publish = "dist/client/"
