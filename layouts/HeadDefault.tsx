@@ -10,7 +10,7 @@ function HeadDefault() {
       <meta name="author" content="Aurélien Lourot" />
       <meta
         name="keywords"
-        content="aurelien, aurélien, lourot, software, developer, berlin, freelance, engineer"
+        content="aurelien, aurélien, lourot, software, developer, berlin, freelance, engineer, consulting"
       />
       <link
         rel="stylesheet"
