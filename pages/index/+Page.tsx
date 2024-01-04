@@ -72,15 +72,22 @@ function Page() {
 }
 
 function Button({
+  className,
   href,
   fontAwesomeClasses,
 }: {
+  className?: string;
   href: string;
   fontAwesomeClasses: string;
 }) {
   return (
     <a href={href} target="_blank">
-      <div className="inline-flex items-center justify-center size-8 mr-3 border border-gray-300 rounded">
+      <div
+        className={
+          "inline-flex items-center justify-center size-8 mr-3 border border-gray-300 rounded " +
+          className
+        }
+      >
         <i className={fontAwesomeClasses}></i>
       </div>
     </a>
