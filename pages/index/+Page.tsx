@@ -5,8 +5,8 @@ import avatarUrl from "../../assets/avatar.jpeg";
 
 function Page() {
   return (
-    <main className="font-light max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-4xl mx-auto my-5 sm:my-10 p-10 sm:border border-gray-300 rounded-md">
-      <section className="mx-auto">
+    <main className="max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-4xl mx-auto my-5 sm:my-10 p-10 sm:border border-gray-300 rounded-md">
+      <section className="mx-auto pb-5 border-b border-gray-300">
         <div className="float-left mb-5 sm:mr-10 w-full sm:w-fit">
           <div className="w-32 h-32 mx-auto rounded-full overflow-hidden">
             <img src={avatarUrl} className="scale-105" />
@@ -14,7 +14,7 @@ function Page() {
         </div>
         <h1 className="text-2xl font-medium">Aurélien Lourot</h1>
         <h2 className="text-xl font-normal">Software Engineer</h2>
-        <p className="my-1">Berlin, Germany</p>
+        <p className="my-1 font-light">Berlin, Germany</p>
         <div className="text-xl my-2 text-gray-800">
           <Button
             href="https://github.com/AurelienLourot"
@@ -33,6 +33,13 @@ function Page() {
             fontAwesomeClasses="fa-solid fa-envelope"
           />
         </div>
+      </section>
+      <section className="mx-auto pt-5">
+        <p>
+          Writing good and bad software for quite some time. From embedded
+          systems to Web via DevOps, among others. Excited about programming,
+          with opinions, doubts and attention to detail.
+        </p>
       </section>
     </main>
   );
