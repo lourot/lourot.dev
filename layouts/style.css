@@ -1,37 +1,7 @@
+html {
+  font-size: min(5.3vw, 1em);
+}
+
 body {
-  font-family: "Roboto Mono";
-  font-size: min(6vw, 7vh, 3em);
-  color: #333;
-
-  margin: 0;
-  padding-top: 10vh;
-  min-height: 90vh;
-
-  display: flex;
-  justify-content: center;
-}
-
-div.name {
-  font-size: 1.5em;
-  font-weight: bold;
-}
-
-div.city {
-  padding-bottom: 0.2em;
-}
-
-.light {
-  font-size: 0.7em;
-  color: #555;
-}
-
-a {
-  color: unset;
-  text-decoration: unset;
-}
-
-i.logo {
-  vertical-align: middle;
-  padding-left: 0.05em;
-  padding-right: 0.15em;
+  font-family: "Roboto Mono", monospace;
 }

@@ -13,8 +13,16 @@ function HeadDefault() {
         content="aurelien, aurélien, lourot, software, developer, berlin, freelance, engineer, consulting"
       />
       <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap"
         rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Roboto+Mono"
+      />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap"
+        rel="stylesheet"
+      />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap"
+        rel="stylesheet"
       />
       <link
         rel="stylesheet"
