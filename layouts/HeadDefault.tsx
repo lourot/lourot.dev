@@ -14,7 +14,7 @@ function HeadDefault() {
       />
       <link
         rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Open+Sans"
+        href="https://fonts.googleapis.com/css?family=Roboto+Mono"
       />
       <link
         rel="stylesheet"
