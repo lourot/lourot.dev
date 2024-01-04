@@ -43,8 +43,9 @@ function Page() {
           with opinions, doubts and attention to detail.
         </div>
         <div className="mb-5">
-          Currently spending most of my time building Vike, a web framework
-          similar to Next.js and Nuxt.
+          Currently spending most of my time building{" "}
+          <Link href="https://vike.dev">Vike</Link>, a web framework similar to
+          Next.js and Nuxt.
         </div>
         <div className="mb-5">
           Available part-time for new projects which would combine as many of
@@ -53,7 +54,12 @@ function Page() {
             <Li className="mt-2">Developing open-source software, and/or</Li>
             <Li>For-good / non-profit, and/or</Li>
             <Li>
-              In combination with my current projects (Vike, Frameright), and/or
+              In combination with my current projects (
+              <Link href="https://vike.dev">Vike</Link>,{" "}
+              <Link href="https://docs.frameright.io/introduction/">
+                Frameright
+              </Link>
+              ), and/or
             </Li>
             <Li>
               Opportunity to learn new, reusable technical skills (especially in
@@ -102,4 +108,12 @@ function Li({
   children: React.ReactNode;
 }) {
   return <li className={"ml-6 " + className}>{children}</li>;
+}
+
+function Link({ href, children }: { href: string; children: React.ReactNode }) {
+  return (
+    <a href={href} target="_blank" className="text-sky-700 underline">
+      {children}
+    </a>
+  );
 }
