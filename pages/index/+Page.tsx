@@ -2,11 +2,14 @@ export default Page;
 
 import React from "react";
 import avatarUrl from "../../assets/avatar.jpeg";
+import vikeUrl from "../../assets/vike.svg";
+import batiUrl from "../../assets/bati.svg";
+import framerightUrl from "../../assets/frameright.png";
 
 function Page() {
   return (
     <main className="max-w-4xl mx-auto p-5 sm:p-10">
-      <section className="mx-auto pb-10 border-b border-gray-300">
+      <Section>
         <div className="float-left mb-5 sm:mr-10 w-full sm:w-fit">
           <div className="w-32 h-32 mx-auto rounded-full overflow-hidden">
             <img src={avatarUrl} className="scale-105" />
@@ -35,8 +38,32 @@ function Page() {
             />
           </div>
         </span>
-      </section>
-      <section className="mx-auto pt-10">
+      </Section>
+      <Section>
+        <h2 className="font-medium mb-5">Currently working on:</h2>
+        <WorkItem imgSrc={vikeUrl}>
+          <div>
+            <Link href="https://vike.dev">vike.dev</Link>
+          </div>
+          <div>JavaScript frontend framework</div>
+          <div>Fast, modular, Vite-based</div>
+        </WorkItem>
+        <WorkItem imgSrc={batiUrl}>
+          <div>
+            <Link href="https://batijs.github.io">batijs.github.io</Link>
+          </div>
+          <div>Next-gen web app scaffolder</div>
+        </WorkItem>
+        <WorkItem imgSrc={framerightUrl} last>
+          <div>
+            <Link href="https://docs.frameright.io/introduction">
+              frameright.io
+            </Link>
+          </div>
+          <div>Next-gen responsive images</div>
+        </WorkItem>
+      </Section>
+      <Section last>
         <div className="mb-5">
           Writing good and bad software for quite some time. From embedded
           systems to Web via DevOps, among others. Excited about programming,
@@ -72,8 +99,50 @@ function Page() {
           occasional exchanges and consulting in case you or your team needs
           advice, for example on an issue related to web frameworks.
         </div>
-      </section>
+      </Section>
     </main>
+  );
+}
+
+function Section({
+  className,
+  last,
+  children,
+}: {
+  className?: string;
+  last?: boolean;
+  children: React.ReactNode;
+}) {
+  return (
+    <section
+      className={
+        "mx-auto py-10 " + (last ? "" : "border-b border-gray-300 ") + className
+      }
+    >
+      {children}
+    </section>
+  );
+}
+
+function WorkItem({
+  imgSrc,
+  last,
+  children,
+}: {
+  imgSrc: string;
+  last?: boolean;
+  children: React.ReactNode;
+}) {
+  return (
+    <>
+      <img
+        className="float-left w-8 sm:w-10 mt-0 sm:mt-1 mr-5 mb-5"
+        src={imgSrc}
+      />
+      <div className={"text-xs sm:text-base " + (last ? "" : "mb-6")}>
+        {children}
+      </div>
+    </>
   );
 }
 
