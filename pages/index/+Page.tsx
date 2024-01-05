@@ -29,12 +29,20 @@ function Page() {
               fontAwesomeClasses="fa-brands fa-twitter"
             />
             <SquareButton
+              href="https://fosstodon.org/@lourot"
+              fontAwesomeClasses="fa-brands fa-mastodon"
+            />
+            <SquareButton
               href="https://www.linkedin.com/in/lourot/"
               fontAwesomeClasses="fa-brands fa-linkedin"
             />
             <SquareButton
               href="mailto:hi@lourot.dev"
               fontAwesomeClasses="fa-solid fa-envelope"
+            />
+            <SquareButton
+              href="https://discord.com/invite/hfHhnJyVg8"
+              fontAwesomeClasses="fa-brands fa-discord"
             />
           </div>
         </span>
@@ -172,7 +180,7 @@ function SquareButton({
     <a href={href} target="_blank">
       <div
         className={
-          "inline-flex items-center justify-center size-8 mr-3 border border-gray-300 rounded " +
+          "inline-flex items-center justify-center size-8 mr-2 border border-gray-300 rounded " +
           className
         }
       >
