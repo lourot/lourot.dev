@@ -47,7 +47,9 @@ function Page() {
         </div>
       </Section>
       <Section>
-        <h2 className="font-medium mb-5">Currently working on:</h2>
+        <h2 className="font-medium mb-5">
+          Currently working on these open-source projects:
+        </h2>
         <WorkItem imgSrc={vikeUrl} href="https://vike.dev">
           <div>
             <Link>vike.dev</Link>
@@ -64,13 +66,13 @@ function Page() {
         <WorkItem
           imgSrc={framerightUrl}
           href="https://docs.frameright.io/introduction"
-          last
         >
           <div>
             <Link>frameright.io</Link>
           </div>
           <div>Next-gen responsive images</div>
         </WorkItem>
+        <SponsorButton />
       </Section>
       <Section last>
         <div className="mb-5">
@@ -181,6 +183,16 @@ function SquareButton({
   );
 }
 
+function SponsorButton() {
+  return (
+    <a href="https://github.com/sponsors/AurelienLourot" target="_blank">
+      <span className="inline-block p-2 font-medium border border-gray-300 rounded">
+        <i className="fa-regular fa-heart"></i> Sponsor me
+      </span>
+    </a>
+  );
+}
+
 function Li({
   className,
   children,
@@ -198,9 +210,13 @@ function Link({
   href?: string;
   children: React.ReactNode;
 }) {
-  return (
-    <a href={href} target="_blank" className="text-sky-700 underline">
-      {children}
-    </a>
-  );
+  const className = "text-sky-700 underline";
+  if (href) {
+    return (
+      <a href={href} target="_blank" className={className}>
+        {children}
+      </a>
+    );
+  }
+  return <span className={className}>{children}</span>;
 }
