@@ -20,19 +20,19 @@ function Page() {
           <h2 className="text-xl font-normal">Software Engineer</h2>
           <p className="my-1 font-light">Berlin, Germany</p>
           <div className="text-xl my-2 text-gray-800">
-            <Button
+            <SquareButton
               href="https://github.com/AurelienLourot"
               fontAwesomeClasses="fa-brands fa-github"
             />
-            <Button
+            <SquareButton
               href="https://twitter.com/AurelienLourot"
               fontAwesomeClasses="fa-brands fa-twitter"
             />
-            <Button
+            <SquareButton
               href="https://www.linkedin.com/in/lourot/"
               fontAwesomeClasses="fa-brands fa-linkedin"
             />
-            <Button
+            <SquareButton
               href="mailto:hi@lourot.dev"
               fontAwesomeClasses="fa-solid fa-envelope"
             />
@@ -48,24 +48,26 @@ function Page() {
       </Section>
       <Section>
         <h2 className="font-medium mb-5">Currently working on:</h2>
-        <WorkItem imgSrc={vikeUrl}>
+        <WorkItem imgSrc={vikeUrl} href="https://vike.dev">
           <div>
-            <Link href="https://vike.dev">vike.dev</Link>
+            <Link>vike.dev</Link>
           </div>
           <div>JavaScript frontend framework</div>
           <div>Fast, modular, Vite-based</div>
         </WorkItem>
-        <WorkItem imgSrc={batiUrl}>
+        <WorkItem imgSrc={batiUrl} href="https://batijs.github.io">
           <div>
-            <Link href="https://batijs.github.io">batijs.github.io</Link>
+            <Link>batijs.github.io</Link>
           </div>
           <div>Next-gen web app scaffolder</div>
         </WorkItem>
-        <WorkItem imgSrc={framerightUrl} last>
+        <WorkItem
+          imgSrc={framerightUrl}
+          href="https://docs.frameright.io/introduction"
+          last
+        >
           <div>
-            <Link href="https://docs.frameright.io/introduction">
-              frameright.io
-            </Link>
+            <Link>frameright.io</Link>
           </div>
           <div>Next-gen responsive images</div>
         </WorkItem>
@@ -128,27 +130,35 @@ function Section({
 
 function WorkItem({
   imgSrc,
+  href,
   last,
   children,
 }: {
   imgSrc: string;
+  href: string;
   last?: boolean;
   children: React.ReactNode;
 }) {
   return (
-    <>
-      <img
-        className="float-left w-8 sm:w-10 mt-0 sm:mt-1 mr-5 mb-5"
-        src={imgSrc}
-      />
-      <div className={"text-xs sm:text-base " + (last ? "" : "mb-6")}>
-        {children}
-      </div>
-    </>
+    <div
+      className={
+        "border border-gray-300 rounded max-w-96 " + (last ? "" : "mb-6")
+      }
+    >
+      <a href={href} target="_blank">
+        <div className="p-3">
+          <img
+            className="float-left w-8 sm:w-10 mt-0 sm:mt-1 mr-5 mb-5"
+            src={imgSrc}
+          />
+          <div className="text-xs sm:text-base">{children}</div>
+        </div>
+      </a>
+    </div>
   );
 }
 
-function Button({
+function SquareButton({
   className,
   href,
   fontAwesomeClasses,
@@ -181,7 +191,13 @@ function Li({
   return <li className={"ml-6 " + className}>{children}</li>;
 }
 
-function Link({ href, children }: { href: string; children: React.ReactNode }) {
+function Link({
+  href,
+  children,
+}: {
+  href?: string;
+  children: React.ReactNode;
+}) {
   return (
     <a href={href} target="_blank" className="text-sky-700 underline">
       {children}
