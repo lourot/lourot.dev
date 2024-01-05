@@ -89,7 +89,7 @@ function Page() {
           Next.js and Nuxt.
         </div>
         <div className="mb-5">
-          Available part-time for new projects ideally combining:
+          Available part-time for new projects ideally combining these traits:
           <ul className="list-disc">
             <Li className="mt-2">Developing open-source software, and/or</Li>
             <Li>For-good / non-profit, and/or</Li>
