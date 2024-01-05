@@ -40,6 +40,13 @@ function Page() {
         </span>
       </Section>
       <Section>
+        <div>
+          Writing good and bad software for quite some time. From embedded
+          systems to Web via DevOps, among others. Excited about programming,
+          with opinions, doubts and attention to detail.
+        </div>
+      </Section>
+      <Section>
         <h2 className="font-medium mb-5">Currently working on:</h2>
         <WorkItem imgSrc={vikeUrl}>
           <div>
@@ -64,11 +71,6 @@ function Page() {
         </WorkItem>
       </Section>
       <Section last>
-        <div className="mb-5">
-          Writing good and bad software for quite some time. From embedded
-          systems to Web via DevOps, among others. Excited about programming,
-          with opinions, doubts and attention to detail.
-        </div>
         <div className="mb-5">
           Currently spending most of my time building{" "}
           <Link href="https://vike.dev">Vike</Link>, a web framework similar to
