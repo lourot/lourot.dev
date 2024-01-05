@@ -84,7 +84,7 @@ function Page() {
       </Section>
       <Section last>
         <div className="mb-5">
-          Currently spending most of my time building{" "}
+          Spending most of my time building{" "}
           <Link href="https://vike.dev">Vike</Link>, a web framework similar to
           Next.js and Nuxt.
         </div>
