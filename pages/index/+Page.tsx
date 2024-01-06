@@ -157,10 +157,7 @@ function WorkItem({
     >
       <a href={href} target="_blank">
         <div className="p-3">
-          <img
-            className="float-left w-8 sm:w-10 mt-0 sm:mt-1 mr-5 mb-5"
-            src={imgSrc}
-          />
+          <img className="float-left mr-5 mb-5" src={imgSrc} />
           {children}
         </div>
       </a>
@@ -194,8 +191,10 @@ function SquareButton({
 function SponsorButton() {
   return (
     <a href="https://github.com/sponsors/AurelienLourot" target="_blank">
-      <span className="inline-block px-4 pt-2 pb-3 font-medium border border-gray-300 rounded">
-        <i className="fa-regular fa-heart"></i> Sponsor me
+      <span className="inline-block px-4 py-2 font-medium border border-gray-300 rounded">
+        <span className="sponsor-text">
+          <i className="fa-regular fa-heart"></i> Sponsor me
+        </span>
       </span>
     </a>
   );

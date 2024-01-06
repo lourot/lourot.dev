@@ -7,5 +7,14 @@ body {
 }
 
 .work-item {
-  font-size: min(calc(4.5vw - 0.225em), 1em);
+  font-size: min(calc(4.5vw - 0.2em), 1em);
+}
+
+.work-item img {
+  width: 3em;
+}
+
+.sponsor-text {
+  position: relative;
+  top: -0.05em;
 }
