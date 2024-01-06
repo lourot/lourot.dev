@@ -151,7 +151,8 @@ function WorkItem({
   return (
     <div
       className={
-        "border border-gray-300 rounded max-w-96 " + (last ? "" : "mb-6")
+        "work-item border border-gray-300 rounded max-w-96 " +
+        (last ? "" : "mb-6")
       }
     >
       <a href={href} target="_blank">
@@ -160,7 +161,7 @@ function WorkItem({
             className="float-left w-8 sm:w-10 mt-0 sm:mt-1 mr-5 mb-5"
             src={imgSrc}
           />
-          <div className="text-xs sm:text-base">{children}</div>
+          {children}
         </div>
       </a>
     </div>

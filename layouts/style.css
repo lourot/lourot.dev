@@ -5,3 +5,7 @@ html {
 body {
   font-family: "Roboto Mono", monospace;
 }
+
+.work-item {
+  font-size: min(calc(4.5vw - 0.225em), 1em);
+}
