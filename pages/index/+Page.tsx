@@ -62,7 +62,7 @@ function Page() {
           <div>
             <Link>vike.dev</Link>
           </div>
-          <div>JavaScript frontend framework</div>
+          <div>JavaScript web app framework</div>
           <div>Fast, modular, Vite-based</div>
         </WorkItem>
         <WorkItem imgSrc={batiUrl} href="https://batijs.github.io">
@@ -85,8 +85,8 @@ function Page() {
       <Section last>
         <div className="mb-5">
           Spending most of my time building{" "}
-          <Link href="https://vike.dev">Vike</Link>, a web framework similar to
-          Next.js and Nuxt.
+          <Link href="https://vike.dev">Vike</Link>, a web app framework similar
+          to Next.js and Nuxt.
         </div>
         <div className="mb-5">
           Available part-time for new projects ideally combining these traits:
@@ -110,7 +110,7 @@ function Page() {
         <div>
           Reach out if you think we can be a match. I'm also available for
           occasional exchanges and consulting in case you or your team needs
-          advice, for example on an issue related to web frameworks.
+          advice, for example on an issue related to web app frameworks.
         </div>
       </Section>
     </main>
