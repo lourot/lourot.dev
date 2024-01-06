@@ -194,7 +194,7 @@ function SquareButton({
 function SponsorButton() {
   return (
     <a href="https://github.com/sponsors/AurelienLourot" target="_blank">
-      <span className="inline-block p-2 font-medium border border-gray-300 rounded">
+      <span className="inline-block px-4 pt-2 pb-3 font-medium border border-gray-300 rounded">
         <i className="fa-regular fa-heart"></i> Sponsor me
       </span>
     </a>
