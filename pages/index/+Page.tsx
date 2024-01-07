@@ -56,7 +56,7 @@ function Page() {
       </Section>
       <Section>
         <h2 className="font-medium mb-5">
-          Currently maintaining these open-source projects:
+          Currently co-maintaining these open-source projects:
         </h2>
         <WorkItem imgSrc={vikeUrl} href="https://vike.dev">
           <div>
