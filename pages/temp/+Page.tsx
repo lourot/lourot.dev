@@ -192,7 +192,9 @@ function SponsorButton() {
   return (
     <a href="https://github.com/sponsors/AurelienLourot" target="_blank">
       <span className="inline-block px-4 py-2 font-medium border border-gray-300 rounded">
-        LA_TEMP
+        <span className="LA_TEMP">
+          <i className="fa-regular fa-heart"></i> LA_TEMP
+        </span>
       </span>
     </a>
   );
