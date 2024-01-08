@@ -193,7 +193,7 @@ function SponsorButton() {
     <a href="https://github.com/sponsors/AurelienLourot" target="_blank">
       <span className="inline-block px-4 py-2 font-medium border border-gray-300 rounded">
         <span className="Vasx9acqVp">
-          <i className="fa-regular fa-heart"></i> LA_TEMP2
+          <i className="fa-regular fa-heart"></i> Sponsor me
         </span>
       </span>
     </a>
