@@ -49,9 +49,9 @@ function Page() {
       </Section>
       <Section>
         <div>
-          Writing good and bad software for quite some time. From embedded
-          systems to Web via DevOps, among others. Excited about programming,
-          with opinions, doubts and attention to detail.
+          Programming since I was twelve. From embedded systems to web via
+          DevOps, among others. Excited about software development, with
+          opinions, doubts and attention to detail.
         </div>
       </Section>
       <Section>
@@ -84,12 +84,12 @@ function Page() {
       </Section>
       <Section last>
         <div className="mb-5">
-          Spending most of my time building{" "}
+          Spending most of my time working on{" "}
           <Link href="https://vike.dev">Vike</Link>, a web app framework similar
           to Next.js and Nuxt.
         </div>
         <div className="mb-5">
-          Available part-time for new projects ideally combining these traits:
+          Available for new projects ideally combining these traits:
           <ul className="list-disc">
             <Li className="mt-2">Developing open-source software, and/or</Li>
             <Li>For-good / non-profit, and/or</Li>
