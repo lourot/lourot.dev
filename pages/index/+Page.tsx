@@ -210,10 +210,10 @@ function SupportButton({
 }) {
   return (
     <a href={href} target="_blank">
-      <span className="inline-block whitespace-nowrap px-4 py-2 font-medium border border-gray-300 rounded">
-        <i className={`text-2xl align-middle ${iconClassName}`}></i>
-        <span className="align-middle"> {text}</span>
-      </span>
+      <div className="whitespace-nowrap px-4 font-medium border border-gray-300 rounded">
+        <i className={`text-2xl align-middle leading-10 ${iconClassName}`}></i>
+        <span style={{ verticalAlign: "-.08em" }}> {text}</span>
+      </div>
     </a>
   );
 }
