@@ -13,9 +13,3 @@ body {
 .work-item img {
   width: 3em;
 }
-
-/* Don't use a class name like "sponsor-text" otherwise ad-blockers will block it */
-.Vasx9acqVp {
-  position: relative;
-  top: -0.05em;
-}

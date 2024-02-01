@@ -80,7 +80,18 @@ function Page() {
           </div>
           <div>Next-gen responsive images</div>
         </WorkItem>
-        <SponsorButton />
+        <div className="flex flex-wrap gap-x-6 gap-y-2">
+          <SupportButton
+            text="Sponsor me"
+            iconClassName="fa-brands fa-github"
+            href="https://github.com/sponsors/AurelienLourot"
+          />
+          <SupportButton
+            text="Donate"
+            iconClassName="fa-brands fa-paypal"
+            href="https://paypal.me/AurelienLourot"
+          />
+        </div>
       </Section>
       <Section last>
         <div className="mb-5">
@@ -188,13 +199,20 @@ function SquareButton({
   );
 }
 
-function SponsorButton() {
+function SupportButton({
+  text,
+  iconClassName,
+  href,
+}: {
+  text: string;
+  iconClassName: string;
+  href: string;
+}) {
   return (
-    <a href="https://github.com/sponsors/AurelienLourot" target="_blank">
-      <span className="inline-block px-4 py-2 font-medium border border-gray-300 rounded">
-        <span className="Vasx9acqVp">
-          <i className="fa-regular fa-heart"></i> Sponsor me
-        </span>
+    <a href={href} target="_blank">
+      <span className="inline-block whitespace-nowrap px-4 py-2 font-medium border border-gray-300 rounded">
+        <i className={`text-2xl align-middle ${iconClassName}`}></i>
+        <span className="align-middle"> {text}</span>
       </span>
     </a>
   );
