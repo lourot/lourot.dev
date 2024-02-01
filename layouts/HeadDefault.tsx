@@ -24,10 +24,6 @@ function HeadDefault() {
         href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap"
         rel="stylesheet"
       />
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      />
       {/* So that lourot.dev appears verified on my Mastodon profile */}
       <link rel="me" href="https://fosstodon.org/@lourot" />
     </>

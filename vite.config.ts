@@ -10,5 +10,5 @@ export default {
       includeAssetsImportedByServer: true,
     }),
   ],
-  optimizeDeps: { include: ["cross-fetch", "react/jsx-runtime"] },
+  optimizeDeps: { include: ["react/jsx-runtime"] },
 } satisfies UserConfig;
