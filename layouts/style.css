@@ -1,15 +1,15 @@
 html {
   font-size: min(5.7vw, 0.9em);
-}
 
-body {
-  font-family: "Roboto Mono", monospace;
-}
+  body {
+    font-family: "Roboto Mono", monospace;
 
-.work-item {
-  font-size: min(calc(4.5vw - 0.2em), 1em);
-}
+    .work-item {
+      font-size: min(calc(4.5vw - 0.2em), 1em);
 
-.work-item img {
-  width: 3em;
+      img {
+        width: 3em;
+      }
+    }
+  }
 }
