@@ -8,6 +8,7 @@ function HeadDefault() {
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="author" content="Aurélien Lourot" />
+      <meta name="description" content="Aurélien Lourot" />
       <meta
         name="keywords"
         content="aurelien, aurélien, lourot, software, developer, berlin, freelance, engineer, consulting"
