@@ -1,8 +1,13 @@
 export default Page;
 
 import React from "react";
+import { Section, SectionWithAvatar } from "../../layouts/Section";
 import { Link } from "../../components/Link";
-import avatarUrl from "../../assets/avatar.jpeg";
+import {
+  SquareButton,
+  GithubSponsorButton,
+  PaypalDonateButton,
+} from "../../components/Button";
 import vikeUrl from "../../assets/vike.svg";
 import batiUrl from "../../assets/bati.svg";
 import framerightUrl from "../../assets/frameright.png";
@@ -10,44 +15,37 @@ import framerightUrl from "../../assets/frameright.png";
 function Page() {
   return (
     <>
-      <Section>
-        <div className="float-left mb-5 sm:mr-10 w-full sm:w-fit">
-          <div className="w-32 h-32 mx-auto rounded-full overflow-hidden">
-            <img src={avatarUrl} className="scale-105" />
-          </div>
+      <SectionWithAvatar>
+        <h1 className="text-2xl font-medium">Aurélien Lourot</h1>
+        <h2 className="text-xl font-normal">Software Engineer</h2>
+        <p className="my-1 font-light">Berlin, Germany</p>
+        <div className="text-xl my-2 text-gray-800">
+          <SquareButton
+            href="https://github.com/AurelienLourot"
+            fontAwesomeClasses="fa-brands fa-github"
+          />
+          <SquareButton
+            href="https://twitter.com/AurelienLourot"
+            fontAwesomeClasses="fa-brands fa-twitter"
+          />
+          <SquareButton
+            href="https://fosstodon.org/@lourot"
+            fontAwesomeClasses="fa-brands fa-mastodon"
+          />
+          <SquareButton
+            href="https://www.linkedin.com/in/lourot/"
+            fontAwesomeClasses="fa-brands fa-linkedin"
+          />
+          <SquareButton
+            href="mailto:hi@lourot.dev"
+            fontAwesomeClasses="fa-solid fa-envelope"
+          />
+          <SquareButton
+            href="https://discord.com/invite/hfHhnJyVg8"
+            fontAwesomeClasses="fa-brands fa-discord"
+          />
         </div>
-        <span className="block w-fit mx-auto sm:inline">
-          <h1 className="text-2xl font-medium">Aurélien Lourot</h1>
-          <h2 className="text-xl font-normal">Software Engineer</h2>
-          <p className="my-1 font-light">Berlin, Germany</p>
-          <div className="text-xl my-2 text-gray-800">
-            <SquareButton
-              href="https://github.com/AurelienLourot"
-              fontAwesomeClasses="fa-brands fa-github"
-            />
-            <SquareButton
-              href="https://twitter.com/AurelienLourot"
-              fontAwesomeClasses="fa-brands fa-twitter"
-            />
-            <SquareButton
-              href="https://fosstodon.org/@lourot"
-              fontAwesomeClasses="fa-brands fa-mastodon"
-            />
-            <SquareButton
-              href="https://www.linkedin.com/in/lourot/"
-              fontAwesomeClasses="fa-brands fa-linkedin"
-            />
-            <SquareButton
-              href="mailto:hi@lourot.dev"
-              fontAwesomeClasses="fa-solid fa-envelope"
-            />
-            <SquareButton
-              href="https://discord.com/invite/hfHhnJyVg8"
-              fontAwesomeClasses="fa-brands fa-discord"
-            />
-          </div>
-        </span>
-      </Section>
+      </SectionWithAvatar>
       <Section>
         <div>
           Programming since I was twelve. From embedded systems to web via
@@ -82,16 +80,8 @@ function Page() {
           <div>Next-gen responsive images</div>
         </WorkItem>
         <div className="flex flex-wrap gap-x-6 gap-y-2">
-          <SupportButton
-            text="Sponsor me"
-            iconClassName="fa-brands fa-github"
-            href="https://github.com/sponsors/AurelienLourot"
-          />
-          <SupportButton
-            text="Donate"
-            iconClassName="fa-brands fa-paypal"
-            href="https://paypal.me/AurelienLourot"
-          />
+          <GithubSponsorButton />
+          <PaypalDonateButton />
         </div>
       </Section>
       <Section>
@@ -129,12 +119,6 @@ function Page() {
   );
 }
 
-function Section({ children }: { children: React.ReactNode }) {
-  return (
-    <section className={"mx-auto py-10 border-gray-300"}>{children}</section>
-  );
-}
-
 function WorkItem({
   imgSrc,
   href,
@@ -160,48 +144,6 @@ function WorkItem({
         </div>
       </a>
     </div>
-  );
-}
-
-function SquareButton({
-  className,
-  href,
-  fontAwesomeClasses,
-}: {
-  className?: string;
-  href: string;
-  fontAwesomeClasses: string;
-}) {
-  return (
-    <a href={href} target="_blank">
-      <div
-        className={
-          "inline-flex items-center justify-center size-8 mr-2 border border-gray-300 rounded " +
-          className
-        }
-      >
-        <i className={fontAwesomeClasses}></i>
-      </div>
-    </a>
-  );
-}
-
-function SupportButton({
-  text,
-  iconClassName,
-  href,
-}: {
-  text: string;
-  iconClassName: string;
-  href: string;
-}) {
-  return (
-    <a href={href} target="_blank">
-      <div className="whitespace-nowrap px-4 font-medium border border-gray-300 rounded">
-        <i className={`text-2xl align-middle leading-10 ${iconClassName}`}></i>
-        <span style={{ verticalAlign: "-.08em" }}> {text}</span>
-      </div>
-    </a>
   );
 }
 

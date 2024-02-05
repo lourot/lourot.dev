@@ -2,16 +2,25 @@ export default Page;
 
 import React from "react";
 import { usePageContext } from "vike-react/usePageContext";
-import { Link } from "../../components/Link";
+import { Section } from "../../layouts/Section";
 
 function Page() {
   const { is404 } = usePageContext();
   return (
-    <>
-      <div>{is404 ? "404 Page Not Found" : "500 Internal Server Error"}</div>
+    <Section>
       <div>
-        <Link href="/">&larr; home</Link>
+        {is404 ? (
+          <>
+            <h1>404</h1>
+            <p>page not found</p>
+          </>
+        ) : (
+          <>
+            <h1>500</h1>
+            <p>internal server error</p>
+          </>
+        )}
       </div>
-    </>
+    </Section>
   );
 }

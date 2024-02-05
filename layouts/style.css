@@ -4,7 +4,7 @@ html {
   body {
     font-family: "Roboto Mono", monospace;
 
-    section:not(:last-child) {
+    section:not(:last-of-type) {
       border-bottom-width: 1px;
     }
 
