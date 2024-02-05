@@ -6,5 +6,5 @@ import "./tailwind.css";
 import React from "react";
 
 function LayoutDefault({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+  return <main className="max-w-4xl mx-auto p-5 sm:p-10">{children}</main>;
 }

@@ -1,6 +1,7 @@
 export default Page;
 
 import React from "react";
+import { Link } from "../../components/Link";
 import avatarUrl from "../../assets/avatar.jpeg";
 import vikeUrl from "../../assets/vike.svg";
 import batiUrl from "../../assets/bati.svg";
@@ -8,7 +9,7 @@ import framerightUrl from "../../assets/frameright.png";
 
 function Page() {
   return (
-    <main className="max-w-4xl mx-auto p-5 sm:p-10">
+    <>
       <Section>
         <div className="float-left mb-5 sm:mr-10 w-full sm:w-fit">
           <div className="w-32 h-32 mx-auto rounded-full overflow-hidden">
@@ -124,7 +125,7 @@ function Page() {
           advice, for example on an issue related to web app frameworks.
         </div>
       </Section>
-    </main>
+    </>
   );
 }
 
@@ -212,22 +213,4 @@ function Li({
   children: React.ReactNode;
 }) {
   return <li className={"ml-6 " + className}>{children}</li>;
-}
-
-function Link({
-  href,
-  children,
-}: {
-  href?: string;
-  children: React.ReactNode;
-}) {
-  const className = "text-sky-700 underline";
-  if (href) {
-    return (
-      <a href={href} target="_blank" className={className}>
-        {children}
-      </a>
-    );
-  }
-  return <span className={className}>{children}</span>;
 }
