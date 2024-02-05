@@ -4,6 +4,10 @@ html {
   body {
     font-family: "Roboto Mono", monospace;
 
+    section:not(:last-child) {
+      border-bottom-width: 1px;
+    }
+
     .work-item {
       font-size: min(calc(4.5vw - 0.2em), 1em);
 

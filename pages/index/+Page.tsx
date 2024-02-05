@@ -93,7 +93,7 @@ function Page() {
           />
         </div>
       </Section>
-      <Section last>
+      <Section>
         <div className="mb-5">
           Spending most of my time working on{" "}
           <Link href="https://vike.dev">Vike</Link>, a web app framework similar
@@ -128,23 +128,9 @@ function Page() {
   );
 }
 
-function Section({
-  className,
-  last,
-  children,
-}: {
-  className?: string;
-  last?: boolean;
-  children: React.ReactNode;
-}) {
+function Section({ children }: { children: React.ReactNode }) {
   return (
-    <section
-      className={
-        "mx-auto py-10 " + (last ? "" : "border-b border-gray-300 ") + className
-      }
-    >
-      {children}
-    </section>
+    <section className={"mx-auto py-10 border-gray-300"}>{children}</section>
   );
 }
 
