@@ -3,7 +3,10 @@ export default Page;
 import React from "react";
 import { SectionWithAvatar } from "../../layouts/Section";
 import { Link } from "../../components/Link";
-import { PaypalDonateButton } from "../../components/Button";
+import {
+  BuymeacoffeeButton,
+  PaypalDonateButton,
+} from "../../components/Button";
 
 function Page() {
   return (
@@ -23,7 +26,8 @@ function Page() {
           difference. Thank you.
         </div>
       </SectionWithAvatar>
-      <div className="text-center">
+      <div className="flex flex-wrap gap-6 gap-y-4 justify-center">
+        <BuymeacoffeeButton />
         <PaypalDonateButton />
       </div>
     </>

@@ -6,6 +6,7 @@ import { Link } from "../../components/Link";
 import {
   SquareButton,
   GithubSponsorButton,
+  BuymeacoffeeButton,
   PaypalDonateButton,
 } from "../../components/Button";
 import vikeUrl from "../../assets/vike.svg";
@@ -81,6 +82,7 @@ function Page() {
         </WorkItem>
         <div className="flex flex-wrap gap-x-6 gap-y-2">
           <GithubSponsorButton />
+          <BuymeacoffeeButton />
           <PaypalDonateButton />
         </div>
       </Section>
