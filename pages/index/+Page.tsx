@@ -26,7 +26,7 @@ function Page() {
           />
           <SquareButton
             href="https://twitter.com/AurelienLourot"
-            fontAwesomeClasses="fa-brands fa-twitter"
+            fontAwesomeClasses="fa-brands fa-x-twitter"
           />
           <SquareButton
             href="https://fosstodon.org/@lourot"
