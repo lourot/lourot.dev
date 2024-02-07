@@ -140,5 +140,5 @@ function Li({
   className?: string;
   children: React.ReactNode;
 }) {
-  return <li className={"ml-6 " + className}>{children}</li>;
+  return <li className={"ml-7 mb-2 sm:mb-0 px-2 " + className}>{children}</li>;
 }
