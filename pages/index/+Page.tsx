@@ -88,33 +88,17 @@ function Page() {
       </Section>
       <Section>
         <div className="mb-5">
-          Spending most of my time working on{" "}
-          <Link href="https://vike.dev">Vike</Link>, a web app framework similar
-          to Next.js and Nuxt.
-        </div>
-        <div className="mb-5">
           Available for new projects ideally combining these traits:
           <ul className="list-disc">
-            <Li className="mt-2">Developing open-source software, and/or</Li>
-            <Li>For-good / non-profit, and/or</Li>
-            <Li>
-              In combination with my current projects (
-              <Link href="https://vike.dev">Vike</Link>,{" "}
-              <Link href="https://docs.frameright.io/introduction/">
-                Frameright
-              </Link>
-              ), and/or
-            </Li>
+            <Li className="mt-2">Developing open-source software,</Li>
+            <Li>For-good / non-profit,</Li>
+            <Li>In combination with my current projects,</Li>
             <Li>
               Opportunity to learn new, reusable technical skills (especially in
-              web dev).
+              web dev),
             </Li>
+            <Li>Flexible working hours and remote work.</Li>
           </ul>
-        </div>
-        <div>
-          Reach out if you think we can be a match. I'm also available for
-          occasional exchanges and consulting in case you or your team needs
-          advice, for example on an issue related to web app frameworks.
         </div>
       </Section>
     </>
