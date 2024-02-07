@@ -97,7 +97,7 @@ function Page() {
               Opportunity to learn new, reusable technical skills (especially in
               web dev),
             </Li>
-            <Li>Flexible working hours and remote work.</Li>
+            <Li>Flexible working hours and location.</Li>
           </ul>
         </div>
       </Section>
