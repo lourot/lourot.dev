@@ -22,26 +22,32 @@ function Page() {
         <p className="my-1 font-light">Berlin, Germany</p>
         <div className="flex gap-2 text-xl my-2 text-gray-800">
           <SquareButton
+            title="GitHub"
             href="https://github.com/AurelienLourot"
             fontAwesomeClasses="fa-brands fa-github"
           />
           <SquareButton
+            title="X / Twitter"
             href="https://twitter.com/AurelienLourot"
             fontAwesomeClasses="fa-brands fa-x-twitter"
           />
           <SquareButton
+            title="Mastodon"
             href="https://fosstodon.org/@lourot"
             fontAwesomeClasses="fa-brands fa-mastodon"
           />
           <SquareButton
+            title="LinkedIn"
             href="https://www.linkedin.com/in/lourot/"
             fontAwesomeClasses="fa-brands fa-linkedin"
           />
           <SquareButton
+            title="E-mail"
             href="mailto:hi@lourot.dev"
             fontAwesomeClasses="fa-solid fa-envelope"
           />
           <SquareButton
+            title="Discord"
             href="https://discord.com/invite/hfHhnJyVg8"
             fontAwesomeClasses="fa-brands fa-discord"
           />
@@ -58,20 +64,21 @@ function Page() {
         <h2 className="font-medium mb-5">
           Currently co-maintaining these open-source projects:
         </h2>
-        <WorkItem imgSrc={vikeUrl} href="https://vike.dev">
+        <WorkItem name="Vike" imgSrc={vikeUrl} href="https://vike.dev">
           <div>
             <Link>vike.dev</Link>
           </div>
           <div>JavaScript web app framework</div>
           <div>Fast, modular, Vite-based</div>
         </WorkItem>
-        <WorkItem imgSrc={batiUrl} href="https://batijs.github.io">
+        <WorkItem name="Bati" imgSrc={batiUrl} href="https://batijs.github.io">
           <div>
             <Link>batijs.github.io</Link>
           </div>
           <div>Next-gen web app scaffolder</div>
         </WorkItem>
         <WorkItem
+          name="Frameright"
           imgSrc={framerightUrl}
           href="https://docs.frameright.io/introduction"
         >
@@ -106,26 +113,25 @@ function Page() {
 }
 
 function WorkItem({
+  name,
   imgSrc,
   href,
-  last,
   children,
 }: {
+  name: string;
   imgSrc: string;
   href: string;
-  last?: boolean;
   children: React.ReactNode;
 }) {
   return (
-    <div
-      className={
-        "work-item border border-gray-300 rounded max-w-96 " +
-        (last ? "" : "mb-6")
-      }
-    >
-      <a href={href} target="_blank">
+    <div className="work-item border border-gray-300 rounded max-w-96 mb-6">
+      <a href={href} target="_blank" aria-label={name}>
         <div className="p-3">
-          <img className="float-left mr-5 mb-5" src={imgSrc} />
+          <img
+            className="float-left mr-5 mb-5"
+            src={imgSrc}
+            alt={`${name}'s logo`}
+          />
           {children}
         </div>
       </a>

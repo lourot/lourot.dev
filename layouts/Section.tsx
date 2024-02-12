@@ -14,7 +14,11 @@ function SectionWithAvatar({ children }: { children: React.ReactNode }) {
     <Section>
       <div className="flex flex-col sm:flex-row items-center sm:items-start gap-x-10 gap-y-5">
         <div className="w-32 h-32 flex-none rounded-full overflow-hidden">
-          <img src={avatarUrl} className="scale-105" />
+          <img
+            src={avatarUrl}
+            className="scale-105"
+            alt="Aurélien's profile picture"
+          />
         </div>
         <div>{children}</div>
       </div>

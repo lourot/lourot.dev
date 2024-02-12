@@ -13,12 +13,15 @@ function Page() {
     <>
       <SectionWithAvatar>
         <div className="mb-5">
-          Hi, I'm Aurélien, creator of a Chrome accessibility{" "}
+          Hi, I'm Aurélien, creator of a{" "}
           <Link href="https://github.com/AurelienLourot/google-input-tools-large-keyboard">
-            extension
+            Chrome accessibility extension
           </Link>{" "}
-          and co-maintainer of a few other open-source{" "}
-          <Link href="https://github.com/AurelienLourot">projects</Link>.
+          and co-maintainer of a few other{" "}
+          <Link href="https://github.com/AurelienLourot">
+            open-source projects
+          </Link>
+          .
         </div>
         <div>
           I spend most of my time writing free and open-source software. Help me

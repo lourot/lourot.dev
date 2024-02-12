@@ -4,9 +4,11 @@ import React from "react";
 
 function Link({
   href,
+  ariaLabel,
   children,
 }: {
   href?: string;
+  ariaLabel?: string;
   children: React.ReactNode;
 }) {
   const className = "text-sky-700 underline";
@@ -16,18 +18,25 @@ function Link({
         href={href}
         target={href.startsWith("/") ? "" : "_blank"}
         className={className}
+        aria-label={ariaLabel}
       >
         {children}
       </a>
     );
   }
-  return <span className={className}>{children}</span>;
+  return (
+    <span className={className} aria-label={ariaLabel}>
+      {children}
+    </span>
+  );
 }
 
 function HomeLink() {
   return (
     <div>
-      <Link href="/">&larr; home</Link>
+      <Link href="/" ariaLabel="Back to home page">
+        &larr; home
+      </Link>
     </div>
   );
 }

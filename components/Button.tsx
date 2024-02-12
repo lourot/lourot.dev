@@ -8,21 +8,19 @@ export {
 import React from "react";
 
 function SquareButton({
-  className,
+  title,
   href,
   fontAwesomeClasses,
 }: {
-  className?: string;
+  title: string;
   href: string;
   fontAwesomeClasses: string;
 }) {
   return (
-    <a href={href} target="_blank">
+    <a href={href} target="_blank" aria-label={title}>
       <div
-        className={
-          "inline-flex items-center justify-center size-8 border border-gray-300 rounded " +
-          className
-        }
+        className="inline-flex items-center justify-center size-8 border border-gray-300 rounded"
+        title={title}
       >
         <i className={fontAwesomeClasses}></i>
       </div>
@@ -80,7 +78,7 @@ function SupportButton({
   href: string;
 }) {
   return (
-    <a href={href} target="_blank">
+    <a href={href} target="_blank" aria-label={text}>
       <div
         className="whitespace-nowrap inline-block px-4 font-medium border border-gray-300 rounded"
         style={{ height: "2.6rem" }}
