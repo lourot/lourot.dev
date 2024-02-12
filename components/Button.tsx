@@ -20,7 +20,7 @@ function SquareButton({
     <a href={href} target="_blank">
       <div
         className={
-          "inline-flex items-center justify-center size-8 mr-2 border border-gray-300 rounded " +
+          "inline-flex items-center justify-center size-8 border border-gray-300 rounded " +
           className
         }
       >
