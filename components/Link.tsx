@@ -11,7 +11,7 @@ function Link({
   ariaLabel?: string;
   children: React.ReactNode;
 }) {
-  const className = "text-sky-700 underline";
+  const className = "text-sky-700 visited:text-purple-800 underline";
   if (href) {
     return (
       <a

@@ -12,7 +12,7 @@ function Page() {
   return (
     <>
       <SectionWithAvatar>
-        <div className="mb-5">
+        <p className="mb-5">
           Hi, I'm Aurélien, creator of a{" "}
           <Link href="https://github.com/AurelienLourot/google-input-tools-large-keyboard">
             Chrome accessibility extension
@@ -22,12 +22,12 @@ function Page() {
             open-source projects
           </Link>
           .
-        </div>
-        <div>
+        </p>
+        <p>
           I spend most of my time writing free and open-source software. Help me
           maintain these projects by donating. Even tiny amounts make a huge
           difference. Thank you.
-        </div>
+        </p>
       </SectionWithAvatar>
       <div className="flex flex-wrap gap-6 gap-y-4 justify-center">
         <BuymeacoffeeButton />

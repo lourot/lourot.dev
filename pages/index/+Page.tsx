@@ -18,7 +18,7 @@ function Page() {
     <>
       <SectionWithAvatar>
         <h1 className="text-2xl font-medium">Aurélien Lourot</h1>
-        <h2 className="text-xl font-normal">Software Engineer</h2>
+        <p className="text-xl font-normal">Software Engineer</p>
         <p className="my-1 font-light">Berlin, Germany</p>
         <div className="flex gap-2 text-xl my-2 text-gray-800">
           <SquareButton
@@ -54,16 +54,16 @@ function Page() {
         </div>
       </SectionWithAvatar>
       <Section>
-        <div>
+        <p>
           Programming since I was twelve. From embedded systems to web via
           DevOps, among others. Excited about software development, with
           opinions, doubts and attention to detail.
-        </div>
+        </p>
       </Section>
       <Section>
-        <h2 className="font-medium mb-5">
+        <p className="font-medium mb-5">
           Currently co-maintaining these open-source projects:
-        </h2>
+        </p>
         <WorkItem name="Vike" imgSrc={vikeUrl} href="https://vike.dev">
           <div>
             <Link>vike.dev</Link>
@@ -95,7 +95,7 @@ function Page() {
       </Section>
       <Section>
         <div className="mb-5">
-          Available for new projects ideally combining these traits:
+          <p>Available for new projects ideally combining these traits:</p>
           <ul className="list-disc">
             <Li className="mt-2">Developing open-source software,</Li>
             <Li>For-good / non-profit,</Li>
