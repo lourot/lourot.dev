@@ -17,7 +17,7 @@ function SquareButton({
   fontAwesomeClasses: string;
 }) {
   return (
-    <a href={href} target="_blank" aria-label={title}>
+    <a href={href} target="_blank" rel="noopener noreferrer" aria-label={title}>
       <div
         className="inline-flex items-center justify-center size-8 border border-gray-300 rounded"
         title={title}
@@ -78,7 +78,7 @@ function SupportButton({
   href: string;
 }) {
   return (
-    <a href={href} target="_blank" aria-label={text}>
+    <a href={href} target="_blank" rel="noopener noreferrer" aria-label={text}>
       <div
         className="whitespace-nowrap inline-block px-4 font-medium border border-gray-300 rounded"
         style={{ height: "2.6rem" }}

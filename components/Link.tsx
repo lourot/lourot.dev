@@ -17,6 +17,7 @@ function Link({
       <a
         href={href}
         target={href.startsWith("/") ? "" : "_blank"}
+        rel="noopener noreferrer"
         className={className}
         aria-label={ariaLabel}
       >

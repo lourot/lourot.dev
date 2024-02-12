@@ -125,7 +125,12 @@ function WorkItem({
 }) {
   return (
     <div className="work-item border border-gray-300 rounded max-w-96 mb-6">
-      <a href={href} target="_blank" aria-label={name}>
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={name}
+      >
         <div className="p-3">
           <img
             className="float-left mr-5 mb-5"

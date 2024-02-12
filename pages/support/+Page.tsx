@@ -13,7 +13,7 @@ function Page() {
     <>
       <SectionWithAvatar>
         <p className="mb-5">
-          Hi, I'm Aurélien, creator of a{" "}
+          Hi, I&apos;m Aurélien, creator of a{" "}
           <Link href="https://github.com/AurelienLourot/google-input-tools-large-keyboard">
             Chrome accessibility extension
           </Link>{" "}
