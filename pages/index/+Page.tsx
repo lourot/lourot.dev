@@ -20,7 +20,7 @@ function Page() {
         <h1 className="text-2xl font-medium">Aurélien Lourot</h1>
         <p className="text-xl font-normal">Software Engineer</p>
         <p className="my-1 font-light">Berlin, Germany</p>
-        <div className="flex gap-2 text-xl my-2 text-gray-800">
+        <div className="flex gap-1 text-2xl mt-4 text-gray-800">
           <SquareButton
             title="GitHub"
             href="https://github.com/AurelienLourot"
@@ -45,11 +45,6 @@ function Page() {
             title="E-mail"
             href="mailto:hi@lourot.dev"
             fontAwesomeClasses="fa-solid fa-envelope"
-          />
-          <SquareButton
-            title="Discord"
-            href="https://discord.com/invite/hfHhnJyVg8"
-            fontAwesomeClasses="fa-brands fa-discord"
           />
         </div>
       </SectionWithAvatar>
