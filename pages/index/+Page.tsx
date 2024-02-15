@@ -61,9 +61,7 @@ function Page() {
         </p>
       </Section>
       <Section>
-        <p className="font-medium mb-5">
-          Currently co-maintaining these open-source projects:
-        </p>
+        <p className="font-medium mb-5">Current open-source projects:</p>
         <WorkItem name="Vike" imgSrc={vikeUrl} href="https://vike.dev">
           <div>
             <Link>vike.dev</Link>
