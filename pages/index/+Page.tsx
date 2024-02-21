@@ -56,7 +56,7 @@ function Page() {
         </p>
       </Section>
       <Section>
-        <p className="font-medium mb-5">Current open-source projects:</p>
+        <p className="font-medium mb-5">Recent open-source projects:</p>
         <WorkItem name="Vike" imgSrc={vikeUrl} href="https://vike.dev">
           <div>
             <Link>vike.dev</Link>
@@ -90,14 +90,9 @@ function Page() {
         <div className="mb-5">
           <p>Available for new projects ideally combining these traits:</p>
           <ul className="list-disc">
-            <Li className="mt-2">Developing open-source software,</Li>
+            <Li className="mt-2">Open-source,</Li>
             <Li>For-good / non-profit,</Li>
-            <Li>In combination with my current projects,</Li>
-            <Li>
-              Opportunity to learn new, reusable technical skills (especially in
-              web dev),
-            </Li>
-            <Li>Flexible working hours and location.</Li>
+            <Li>Freelance / flexible part-time.</Li>
           </ul>
         </div>
       </Section>
