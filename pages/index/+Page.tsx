@@ -23,12 +23,12 @@ function Page() {
         <div className="flex gap-1 text-2xl mt-4 text-gray-800">
           <SquareButton
             title="GitHub"
-            href="https://github.com/AurelienLourot"
+            href="https://github.com/lourot"
             fontAwesomeClasses="fa-brands fa-github"
           />
           <SquareButton
             title="X / Twitter"
-            href="https://twitter.com/AurelienLourot"
+            href="https://twitter.com/alourot"
             fontAwesomeClasses="fa-brands fa-x-twitter"
           />
           <SquareButton

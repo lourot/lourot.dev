@@ -14,14 +14,11 @@ function Page() {
       <SectionWithAvatar>
         <p className="mb-5">
           Hi, I&apos;m Aurélien, creator of a{" "}
-          <Link href="https://github.com/AurelienLourot/google-input-tools-large-keyboard">
+          <Link href="https://github.com/lourot/google-input-tools-large-keyboard">
             Chrome accessibility extension
           </Link>{" "}
           and co-maintainer of a few other{" "}
-          <Link href="https://github.com/AurelienLourot">
-            open-source projects
-          </Link>
-          .
+          <Link href="https://github.com/lourot">open-source projects</Link>.
         </p>
         <p>
           I spend most of my time writing free and open-source software. Help me

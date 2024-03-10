@@ -35,7 +35,7 @@ function GithubSponsorButton() {
       textStyle={{ verticalAlign: "-.08em" }}
       iconClassName="text-xl fa-brands fa-github"
       iconStyle={{ lineHeight: "2.5rem" }}
-      href="https://github.com/sponsors/AurelienLourot"
+      href="https://github.com/sponsors/lourot"
     />
   );
 }
