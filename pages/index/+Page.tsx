@@ -88,12 +88,10 @@ function Page() {
       </Section>
       <Section>
         <div className="mb-5">
-          <p>Available for new projects ideally combining these traits:</p>
-          <ul className="list-disc">
-            <Li className="mt-2">Open-source,</Li>
-            <Li>For-good / non-profit,</Li>
-            <Li>Freelance / flexible part-time.</Li>
-          </ul>
+          <p>
+            Available for new projects, ideally open-source and for-good /
+            non-profit.
+          </p>
         </div>
       </Section>
     </>
