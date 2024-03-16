@@ -51,7 +51,7 @@ function Page() {
       <Section>
         <p>
           Programming since I was twelve. From embedded systems to web via
-          DevOps, among others. Excited about software development, with
+          infrastructure, among others. Excited about software development, with
           opinions, doubts and attention to detail.
         </p>
       </Section>
