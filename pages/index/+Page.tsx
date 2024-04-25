@@ -86,14 +86,6 @@ function Page() {
           <PaypalDonateButton />
         </div>
       </Section>
-      <Section>
-        <div className="mb-5">
-          <p>
-            Available for new projects, ideally open-source and for-good /
-            non-profit.
-          </p>
-        </div>
-      </Section>
     </>
   );
 }
@@ -128,14 +120,4 @@ function WorkItem({
       </a>
     </div>
   );
-}
-
-function Li({
-  className,
-  children,
-}: {
-  className?: string;
-  children: React.ReactNode;
-}) {
-  return <li className={"ml-7 mb-2 sm:mb-0 px-2 " + className}>{children}</li>;
 }
