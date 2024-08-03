@@ -48,6 +48,7 @@ function Page() {
           />
         </div>
       </SectionWithAvatar>
+      {/*
       <Section>
         <p>
           Programming since I was twelve. From embedded systems to web via
@@ -86,6 +87,7 @@ function Page() {
           <PaypalDonateButton />
         </div>
       </Section>
+  */}
     </>
   );
 }

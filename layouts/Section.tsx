@@ -13,6 +13,7 @@ function SectionWithAvatar({ children }: { children: React.ReactNode }) {
   return (
     <Section>
       <div className="flex flex-col sm:flex-row items-center sm:items-start gap-x-10 gap-y-5">
+        <div className="grow"></div>
         <div className="w-36 h-36 flex-none rounded-full overflow-hidden">
           <img
             src={avatarUrl}
@@ -21,6 +22,7 @@ function SectionWithAvatar({ children }: { children: React.ReactNode }) {
           />
         </div>
         <div>{children}</div>
+        <div className="grow"></div>
       </div>
     </Section>
   );
