@@ -26,11 +26,11 @@ function Page() {
             href="https://github.com/lourot"
             fontAwesomeClasses="fa-brands fa-github"
           />
-          <SquareButton
+          {/*<SquareButton
             title="X / Twitter"
             href="https://twitter.com/alourot"
             fontAwesomeClasses="fa-brands fa-x-twitter"
-          />
+          />*/}
           <SquareButton
             title="Mastodon"
             href="https://fosstodon.org/@lourot"
