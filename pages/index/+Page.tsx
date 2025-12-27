@@ -20,7 +20,7 @@ function Page() {
         <h1 className="text-2xl font-medium">Aurélien Lourot</h1>
         <p className="text-xl font-normal">Software Engineer</p>
         <p className="my-1 font-light">Berlin, Germany</p>
-        <div className="flex gap-1 text-2xl mt-4 text-gray-800">
+        <div className="flex gap-5 text-2xl mt-4 text-gray-800">
           <SquareButton
             title="GitHub"
             href="https://github.com/lourot"

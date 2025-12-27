@@ -18,10 +18,7 @@ function SquareButton({
 }) {
   return (
     <a href={href} target="_blank" rel="noopener noreferrer" aria-label={title}>
-      <div
-        className="inline-flex items-center justify-center size-10 border border-gray-300 rounded"
-        title={title}
-      >
+      <div className="inline-flex items-center justify-center" title={title}>
         <i className={fontAwesomeClasses}></i>
       </div>
     </a>
