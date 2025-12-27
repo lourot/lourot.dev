@@ -26,6 +26,11 @@ function Page() {
             href="https://github.com/lourot"
             fontAwesomeClasses="fa-brands fa-github"
           />
+          <SquareButton
+            title="LinkedIn"
+            href="https://www.linkedin.com/in/lourot/"
+            fontAwesomeClasses="fa-brands fa-linkedin"
+          />
           {/*<SquareButton
             title="X / Twitter"
             href="https://twitter.com/alourot"
@@ -35,11 +40,6 @@ function Page() {
             title="Mastodon"
             href="https://fosstodon.org/@lourot"
             fontAwesomeClasses="fa-brands fa-mastodon"
-          />
-          <SquareButton
-            title="LinkedIn"
-            href="https://www.linkedin.com/in/lourot/"
-            fontAwesomeClasses="fa-brands fa-linkedin"
           />
           <SquareButton
             title="E-mail"
