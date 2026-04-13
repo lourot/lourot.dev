@@ -1,2 +1,5 @@
+.pnpm-store/
+/.devcontainer/
+/.vscode/_output/
 /node_modules/
 /dist/
