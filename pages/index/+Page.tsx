@@ -1,17 +1,8 @@
 export default Page;
 
 import React from "react";
-import { Section, SectionWithAvatar } from "../../layouts/Section";
-import { Link } from "../../components/Link";
-import {
-  SquareButton,
-  GithubSponsorButton,
-  BuymeacoffeeButton,
-  PaypalDonateButton,
-} from "../../components/Button";
-import vikeUrl from "../../assets/vike.svg";
-import batiUrl from "../../assets/bati.svg";
-import framerightUrl from "../../assets/frameright.png";
+import { SectionWithAvatar } from "../../layouts/Section";
+import { SquareButton } from "../../components/Button";
 
 function Page() {
   return (
@@ -48,78 +39,6 @@ function Page() {
           />
         </div>
       </SectionWithAvatar>
-      {/*
-      <Section>
-        <p>
-          Programming since I was twelve. From embedded systems to web via
-          infrastructure. Excited about software development, with opinions,
-          doubts and attention to detail.
-        </p>
-      </Section>
-      <Section>
-        <p className="font-medium mb-5">Recent open-source projects:</p>
-        <WorkItem name="Vike" imgSrc={vikeUrl} href="https://vike.dev">
-          <div>
-            <Link>vike.dev</Link>
-          </div>
-          <div>JavaScript web app framework</div>
-          <div>Fast, modular, Vite-based</div>
-        </WorkItem>
-        <WorkItem name="Bati" imgSrc={batiUrl} href="https://batijs.github.io">
-          <div>
-            <Link>batijs.github.io</Link>
-          </div>
-          <div>Next-gen web app scaffolder</div>
-        </WorkItem>
-        <WorkItem
-          name="Frameright"
-          imgSrc={framerightUrl}
-          href="https://docs.frameright.io/introduction"
-        >
-          <div>
-            <Link>frameright.io</Link>
-          </div>
-          <div>Next-gen responsive images</div>
-        </WorkItem>
-        <div className="flex flex-wrap gap-x-4 gap-y-3">
-          <GithubSponsorButton />
-          <BuymeacoffeeButton />
-          <PaypalDonateButton />
-        </div>
-      </Section>
-  */}
     </>
-  );
-}
-
-function WorkItem({
-  name,
-  imgSrc,
-  href,
-  children,
-}: {
-  name: string;
-  imgSrc: string;
-  href: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <div className="work-item border border-gray-300 rounded max-w-96 mb-6">
-      <a
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label={name}
-      >
-        <div className="p-3">
-          <img
-            className="float-left mr-5 mb-5"
-            src={imgSrc}
-            alt={`${name}'s logo`}
-          />
-          {children}
-        </div>
-      </a>
-    </div>
   );
 }
