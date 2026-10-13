@@ -1,0 +1,148 @@
+{
+  "name": "${localWorkspaceFolderBasename}",
+  "image": "local_devcontainer:latest",
+
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached,relabel=private",
+  "workspaceFolder": "/workspace",
+
+  "mounts": [
+    // NOTE: when mounting single files, modifications via vscode to this file may get lost due to the way vscode
+    // handles file saving (it writes to a temp file and then moves it over to the original location, which doesn't
+    // play nicely with the bind mount). Prefer mounting entire folders if possible.
+    "source=${localEnv:HOME}/Documents/git/private/claude-settings/claude.json,target=/home/vscode/.claude.json,type=bind,relabel=private",
+    "source=${localEnv:HOME}/Documents/git/private/claude-settings/claude,target=/home/vscode/.claude,type=bind,relabel=private",
+    "source=${localEnv:HOME}/Documents/git/private/claude-settings/codex,target=/home/vscode/.codex,type=bind,relabel=private",
+    "source=${localEnv:HOME}/Documents/git/private/claude-settings/opencode,target=/home/vscode/.config/opencode,type=bind,relabel=private",
+    "source=${localEnv:HOME}/Documents/git/private/claude-settings/opencode-share,target=/home/vscode/.local/share/opencode,type=bind,relabel=private",
+    "source=${localEnv:HOME}/Documents/git/private/claude-settings/opencode-state,target=/home/vscode/.local/state/opencode,type=bind,relabel=private",
+
+    "source=${localEnv:HOME}/.npmrc,target=/home/vscode/.npmrc,type=bind,readonly,relabel=private",
+    "source=${localEnv:HOME}/.config/pnpm,target=/home/vscode/.config/pnpm,type=bind,readonly,relabel=private",
+    "source=${localEnv:HOME}/.config/pip,target=/home/vscode/.config/pip,type=bind,readonly,relabel=private",
+
+    "source=${localEnv:XAUTHORITY},target=${localEnv:XAUTHORITY},type=bind,readonly,relabel=private",
+
+    // TODO: this mount point contains a GitHub token and should be thus isolated from the rest of the devcontainer. (It
+    // is used by Claude Code.)
+    "source=${localEnv:HOME}/Documents/git/private/gh-settings,target=/home/vscode/.config/gh,type=bind,relabel=private"
+  ],
+
+  "containerEnv": {
+    "XAUTHORITY": "${localEnv:XAUTHORITY}",
+    // Disable Claude Code's own bundled auto-updater. It pulls platform-specific binaries
+    // (e.g. alpine-x64) independently of VS Code's extension system, bypassing the version
+    // pin in the extensions list and the extensions.autoUpdate/autoCheckUpdates settings.
+    "DISABLE_AUTOUPDATER": "1",
+    "DISABLE_TELEMETRY": "1",
+    "DISABLE_ERROR_REPORTING": "1",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
+  },
+
+  "remoteEnv": {
+    "SSH_AUTH_SOCK": "", // must be in remoteEnv (not containerEnv) to override VS Code's SSH agent forwarding
+    "REMOTE_CONTAINERS_SOCKETS": "" // must be in remoteEnv (not containerEnv) to override VS Code's socket advertisement
+  },
+
+  // "initializeCommand": "bash .devcontainer/init-host.sh",
+  // "postCreateCommand": {
+  //   "hello": "echo hello"
+  // },
+  "postAttachCommand": {
+    "track_extensions": "mkdir -p /workspace/.vscode/_output/ && sleep 60 && jq 'sort_by(.identifier.id) | del(.[].metadata.installedTimestamp) | del(.[].location) | del(.[].identifier.uuid)' < ~/.vscode-server/extensions/extensions.json > /workspace/.vscode/_output/extensions.json && ls ~/.vscode-server/extensions/ > /workspace/.vscode/_output/extensions.txt"
+  },
+
+  "runArgs": [
+    "--network=pasta:-T,none,-t,none", // don't expose any ports by default; Pasta = Podman's rootless networking backend
+    // "--network=pasta:-T,none,-t,8080" // expose port 8080 only, but you can also achieve the same through the Ports vscode tab next to Terminal
+
+    // Codex/bubblewrap needs a nested procfs mount; Podman's default masking caused
+    // "VFS: Mount too revealing". Keep the default seccomp profile; do not add SYS_ADMIN.
+    "--security-opt",
+    "unmask=/proc/*"
+  ],
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        // Installed on host:
+        // ms-vscode-remote.remote-containers // Dev Containers
+        // johnpapa.vscode-peacock (seems to fail installing within devcontainers, so installing on host for now)
+        // rangav.vscode-thunder-client (free version refuses to work inside devcontainers)
+        // couimet.rangelink-vscode-extension (custom build from private/rangeLink; installed via 'cd packages/rangelink-vscode-extension; ./scripts/install-local.sh vscode')
+
+        // NOTE(2026-04-24): pinning version 2.1.101 has actually become pointless as it seems like the extension now
+        // calls `extensions.installExtension` after a while and auto-upgrades itself to 2.1.118+. Couldn't find a
+        // specific GitHub issue about that, but generally people complain about the entire auto-update story being full
+        // of unexpected behaviors.
+        "anthropic.claude-code", // @2.1.101",
+
+        // general coding:
+        "christian-kohler.path-intellisense@2.10.0",
+        "eamodio.gitlens@18.2.0",
+        "esbenp.prettier-vscode@12.4.0",
+        "fabiospampinato.vscode-highlight@2.1.0",
+        "miku3920.vscode-render-special-chars@1.1.1",
+        "redhat.vscode-yaml@1.24.0",
+        // "ms-vsliveshare.vsliveshare", // TODO: pin version
+        // "mhutchie.git-graph", // TODO: pin version
+
+        // js/ts/web:
+        "dbaeumer.vscode-eslint@3.0.34",
+        "dsznajder.es7-react-js-snippets@4.4.3",
+        "ecmel.vscode-html-css@2.0.14",
+        // "vue.volar@3.3.7",
+        // "wscats.vue@1.0.26",
+        // "charliemarsh.ruff", // TODO: pin version
+        // "biomejs.biome", // TODO: pin version
+
+        // markdown/docs:
+        // "davidanson.vscode-markdownlint@0.62.0",
+        // "yzhang.markdown-all-in-one@3.6.3",
+        // "kortina.vscode-markdown-notes@0.0.27",
+        // "streetsidesoftware.code-spell-checker@4.5.6",
+        // "streetsidesoftware.code-spell-checker-french@0.4.4",
+        // "streetsidesoftware.code-spell-checker-german@2.3.4",
+        // "tom-latham.markdown-pdf-plus", // TODO: pin version
+
+        // python:
+        // "kevinrose.vsc-python-indent@1.21.0",
+        // "ms-python.black-formatter@2026.6.0",
+        // "ms-python.mypy-type-checker@2026.6.0",
+        // "ms-python.python@2026.4.0",
+        // "ms-python.vscode-pylance@2026.3.1",
+        // "ms-python.vscode-python-envs@1.36.0",
+        // "wholroyd.jinja", // TODO: pin version
+        // "batisteo.vscode-django", // TODO: pin version
+        // "donjayamanne.python-extension-pack", // pulls deprecated deps, remove?
+        // "ms-python.debugpy", // ms-python.python will always pull the latet ms-python.debugpy anyway, so no need to pull it manually and impossible to pin it
+
+        // bash:
+        "mkhl.shfmt@1.5.2",
+        "mads-hartmann.bash-ide-vscode@1.43.0"
+
+        // php:
+        // "bmewburn.vscode-intelephense-client", // TODO: pin version
+
+        // embedded/C++:
+        // "controlforgesystems.controlforge-structured-text", // TODO: pin version
+        // "ms-vscode.cpptools", // TODO: pin version
+        // "ms-vscode.vscode-serial-monitor", // TODO: pin version
+        // "platformio.platformio-ide", // TODO: pin version
+        // "serhioromano.vscode-st", // TODO: pin version
+
+        // C#:
+        // "ms-dotnettools.csharp", // TODO: pin version
+        // "ms-dotnettools.vscode-dotnet-runtime", // TODO: pin version
+      ],
+      "settings": {
+        "dev.containers.gitCredentialHelperConfigLocation": "none",
+        // "dev.containers.copyGitConfig": false,
+        // extensions.autoUpdate stops VS Code from applying updates automatically.
+        // extensions.autoCheckUpdates stops it from even fetching update metadata - without
+        // this, a check can race with the pinned install and win, causing a silent upgrade.
+        "extensions.autoUpdate": false,
+        "extensions.autoCheckUpdates": false
+      }
+    }
+  }
+}
